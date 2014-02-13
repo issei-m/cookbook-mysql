@@ -1,0 +1,87 @@
+[client]
+port = <%= node['mysql']['config']['client']['port'] %>
+socket = <%= node['mysql']['config']['client']['socket'] %>
+default_character_set = <%= node['mysql']['config']['client']['default_character_set'] %>
+
+[mysql]
+#safe-updates
+prompt = '<%= node['mysql']['config']['mysql']['prompt'] %>'
+default_character_set = <%= node['mysql']['config']['mysql']['default_character_set'] %>
+
+[mysqld]
+skip-name-resolve
+skip-external-locking
+
+server_id = <%= node['mysql']['config']['mysqld']['server_id'] %>
+
+default_storage_engine = InnoDB
+
+datadir = <%= node['mysql']['config']['mysqld']['datadir'] %>
+port = <%= node['mysql']['config']['mysqld']['port'] %>
+socket = <%= node['mysql']['config']['mysqld']['socket'] %>
+
+max_connections = <%= node['mysql']['config']['mysqld']['max_connections'] %>
+max_connect_errors = <%= node['mysql']['config']['mysqld']['max_connect_errors'] %>
+max_allowed_packet = <%= node['mysql']['config']['mysqld']['max_allowed_packet'] %>
+
+sort_buffer_size = <%= node['mysql']['config']['mysqld']['sort_buffer_size'] %>
+read_buffer_size = <%= node['mysql']['config']['mysqld']['read_buffer_size'] %>
+
+table_open_cache = <%= node['mysql']['config']['mysqld']['table_open_cache'] %>
+thread_cache_size = <%= node['mysql']['config']['mysqld']['thread_cache_size'] %>
+query_cache_size = <%= node['mysql']['config']['mysqld']['query_cache_size'] %>
+query_cache_type = <%= node['mysql']['config']['mysqld']['query_cache_type'] %>
+tmp_table_size = <%= node['mysql']['config']['mysqld']['tmp_table_size'] %>
+max_heap_table_size = <%= node['mysql']['config']['mysqld']['max_heap_table_size'] %>
+
+character_set_server = <%= node['mysql']['config']['mysqld']['character_set_server'] %>
+collation_server = <%= node['mysql']['config']['mysqld']['collation_server'] %>
+
+sql_mode = "<%= node['mysql']['config']['mysqld']['sql_mode'] %>"
+explicit-defaults-for-timestamp
+
+log_bin = <%= node['mysql']['config']['mysqld']['log_bin'] %>
+binlog_format = <%= node['mysql']['config']['mysqld']['binlog_format'] %>
+binlog_checksum = <%= node['mysql']['config']['mysqld']['binlog_checksum'] %> 
+master_info_repository = <%= node['mysql']['config']['mysqld']['master_info_repository'] %>
+log-slave-updates
+relay_log_info_repository = <%= node['mysql']['config']['mysqld']['relay_log_info_repository'] %> 
+relay_log = <%= node['mysql']['config']['mysqld']['relay_log'] %>
+replicate_ignore_db = <%= node['mysql']['config']['mysqld']['replicate_ignore_db'] %>
+expire_logs_days = <%= node['mysql']['config']['mysqld']['expire_logs_days'] %>
+
+slow_query_log = 1
+long_query_time = <%= node['mysql']['config']['mysqld']['long_query_time'] %>
+log_slow_slave_statements
+
+innodb-strict-mode
+innodb_data_home_dir = <%= node['mysql']['config']['mysqld']['innodb_data_home_dir'] %>
+innodb-file-per-table
+innodb_data_file_path = <%= node['mysql']['config']['mysqld']['innodb_data_file_path'] %>
+innodb_file_format = <%= node['mysql']['config']['mysqld']['innodb_file_format'] %>
+innodb_buffer_pool_size = <%= node['mysql']['config']['mysqld']['innodb_buffer_pool_size'] %>
+innodb_buffer_pool_instances = <%= node['mysql']['config']['mysqld']['innodb_buffer_pool_instances'] %>
+innodb_write_io_threads = <%= node['mysql']['config']['mysqld']['innodb_write_io_threads'] %>
+innodb_read_io_threads = <%= node['mysql']['config']['mysqld']['innodb_read_io_threads'] %>
+innodb_thread_concurrency = <%= node['mysql']['config']['mysqld']['innodb_thread_concurrency'] %>
+innodb_flush_log_at_trx_commit = <%= node['mysql']['config']['mysqld']['innodb_flush_log_at_trx_commit'] %>
+innodb_additional_mem_pool_size = <%= node['mysql']['config']['mysqld']['innodb_additional_mem_pool_size'] %>
+innodb_log_file_size = <%= node['mysql']['config']['mysqld']['innodb_log_file_size'] %>
+innodb_log_buffer_size = <%= node['mysql']['config']['mysqld']['innodb_log_buffer_size'] %>
+innodb_log_files_in_group = <%= node['mysql']['config']['mysqld']['innodb_log_files_in_group'] %>
+innodb_flush_method = <%= node['mysql']['config']['mysqld']['innodb_flush_method'] %>
+innodb_lock_wait_timeout = <%= node['mysql']['config']['mysqld']['innodb_lock_wait_timeout'] %>
+innodb_buffer_pool_load_at_startup = <%= node['mysql']['config']['mysqld']['innodb_buffer_pool_load_at_startup'] %>
+innodb_buffer_pool_dump_at_shutdown = <%= node['mysql']['config']['mysqld']['innodb_buffer_pool_dump_at_shutdown'] %>
+innodb_checksum_algorithm = <%= node['mysql']['config']['mysqld']['innodb_checksum_algorithm'] %>
+innodb_io_capacity = <%= node['mysql']['config']['mysqld']['innodb_io_capacity'] %>
+innodb_large_prefix = <%= node['mysql']['config']['mysqld']['innodb_large_prefix'] %>
+innodb_print_all_deadlocks = <%= node['mysql']['config']['mysqld']['innodb_print_all_deadlocks'] %>
+
+[mysqldump]
+quick
+max_allowed_packet = <%= node['mysql']['config']['mysqldump']['max_allowed_packet'] %>
+default_character_set = <%= node['mysql']['config']['mysqldump']['default_character_set'] %>
+
+[mysqld_safe]
+open_files_limit = <%= node['mysql']['config']['mysqld_safe']['open_files_limit'] %>
