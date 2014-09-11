@@ -7,23 +7,23 @@
 
 default['mysql']['rpms'] = [
   {
-    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-shared-5.6.16-1.el6.x86_64.rpm',
-    :file => 'MySQL-shared-5.6.16-1.el6.x86_64.rpm',
+    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-shared-5.6.19-1.el6.x86_64.rpm',
+    :file => 'MySQL-shared-5.6.19-1.el6.x86_64.rpm',
     :package_name => 'MySQL-shared'
   },
   {
-    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-server-5.6.16-1.el6.x86_64.rpm',
-    :file => 'MySQL-server-5.6.16-1.el6.x86_64.rpm',
+    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-server-5.6.19-1.el6.x86_64.rpm',
+    :file => 'MySQL-server-5.6.19-1.el6.x86_64.rpm',
     :package_name => 'MySQL-server'
   },
   {
-    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-client-5.6.16-1.el6.x86_64.rpm',
-    :file => 'MySQL-client-5.6.16-1.el6.x86_64.rpm',
+    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-client-5.6.19-1.el6.x86_64.rpm',
+    :file => 'MySQL-client-5.6.19-1.el6.x86_64.rpm',
     :package_name => 'MySQL-client'
   },
   {
-    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-devel-5.6.16-1.el6.x86_64.rpm',
-    :file => 'MySQL-devel-5.6.16-1.el6.x86_64.rpm',
+    :url => 'http://cdn.mysql.com/Downloads/MySQL-5.6/MySQL-devel-5.6.19-1.el6.x86_64.rpm',
+    :file => 'MySQL-devel-5.6.19-1.el6.x86_64.rpm',
     :package_name => 'MySQL-devel'
   }
 ]
